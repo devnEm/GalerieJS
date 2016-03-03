@@ -1,0 +1,78 @@
+/*RESET*/
+*{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+}
+body{
+
+	font-family: ubuntu, helvetica, sans-serif;
+}
+li{
+	list-style-type: none;
+}
+table{
+	border-collapse: collapse;
+}
+.mycase{
+	border-radius:10px;
+	-webkit-box-shadow: 2px 2px 6px 2px #E3AEAC;
+	box-shadow: 2px 2px 6px 2px #E3AEAC;
+}
+.monster{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-position: center center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+#voile{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	top:0;
+	left:0;
+	text-align: center;
+
+
+}
+#cartouche{
+	width: 60%;
+	height: 40%;
+	position: relative;
+	z-index: 100;
+	text-align: center;
+	background: #9fc8f8;
+	-webkit-border-radius: 90px 90px 90px 90px;
+	border-radius: 90px 90px 90px 90px;
+
+
+}
+#titre{
+	color: cadetblue;
+	font-size: large;
+	font-family: Ubuntu;
+}
+#titre2{
+	color: darkgreen;
+	font-size: small;
+	font-family: Ubuntu;
+}
+#btn-start{
+
+}
+.chrono{
+	width: 60%;
+	height: 40%;
+	position: relative;
+	z-index: 100;
+	text-align: center;
+	background: #9fc8f8;
+	-webkit-border-radius: 90px 90px 90px 90px;
+	border-radius: 90px 90px 90px 90px;
+	display: inline;
+
+}
