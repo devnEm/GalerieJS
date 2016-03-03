@@ -22,7 +22,7 @@ var centi=0;// initialise les dixtièmes
 var secon=0; //initialise les secondes
 var minu=0; //initialise les minutes
 var compteur;
-var tempsDeJeu= 5;
+var tempsDeJeu=5;
 
 /* METHODES*/
 function initUI(){
@@ -85,6 +85,7 @@ function placeStartScreen(){
 	btn.style.fontFamily='Passion One';
 	btn.style.fontSize = largeurColonne+"px";
 	btn.style.cursor="pointer";
+	btn.style.marginLeft=(cartouche.innertWidth-btn.offsetWidth)*.5+"px";
 	btn.addEventListener('click',function(){
 		playGame();
 	});
@@ -108,15 +109,16 @@ function playGame(){
 	}
 	//lancer et afficher le chronometre
 	chronoStart();
-	var chrono = '<div class="chrono"><div id="minutes">'+minu+'</div><div id="secondes">'+secon+'</div><div id="centième">'+centi+'</div></div>';
-	document.getElementsByTagName('body')[0].innerHTML+=chrono;
 
-	console.log(centi);
 
-	if(minu = tempsDeJeu) {
-		console.log(minu +'est egale à '+tempsDeJeu);
-		stopGame()
-	};
+	if(centi !== tempsDeJeu) {
+		var chrono = '<div class="chrono"><div id="minutes">' + minu + '</div><div id="secondes">' + secon + '</div><div id="centième">' + centi + '</div></div>';
+		document.getElementsByTagName('body')[0].innerHTML += chrono;
+		console.log(centi);
+	}else {
+		console.log(centi +'est egale à '+tempsDeJeu);
+		stopGame();
+	}
 
 }
 function stopGame(){
@@ -127,8 +129,8 @@ function stopGame(){
 function chronoStart(){
 	centi ++;
 	console.log(secon);
-	if (centi>9){centi=0;secon++};
-	if (secon>59){secon=0;minu++};
+	if (centi>9){centi=0;secon++}
+	if (secon>59){secon=0;minu++}
 	compteur=setTimeout('chronoStart()',100);
 
 }
