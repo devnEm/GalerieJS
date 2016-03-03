@@ -22,6 +22,7 @@ var centi=0;// initialise les dixtièmes
 var secon=0; //initialise les secondes
 var minu=0; //initialise les minutes
 var compteur;
+var tempsDeJeu= 5;
 
 /* METHODES*/
 function initUI(){
@@ -112,6 +113,16 @@ function playGame(){
 
 	console.log(centi);
 
+	if(minu = tempsDeJeu) {
+		console.log(minu +'est egale à '+tempsDeJeu);
+		stopGame()
+	};
+
+}
+function stopGame(){
+	chronoStop();
+	alert('fin de partie');
+	initUI();
 }
 function chronoStart(){
 	centi ++;
